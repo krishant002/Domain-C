@@ -1,0 +1,17 @@
+//Factorial of a number
+#include<iostream>
+using namespace std;
+int main()
+{
+    int i,n;
+    cout<<"Enter numebr: ";
+    cin>>n;
+    long fact=1;
+    for(i=1; i<=n;i++)
+    {
+        fact=fact*i;
+    }
+    cout<<"Factorial of "<<n<<" is "<<fact;
+}
+
+/*If the result is extremely large number, which cannot be represented by a long type in C++ that will return the factorial as 0. For such large numbers, we typically need to use a library that supports arbitrary-precision arithmetic.*/

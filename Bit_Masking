@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main() {
+    
+    int a=10;           //1010==10
+    int t = 3;
+    //add /mark a task as ture
+    printf("%d ",a|(1<<(t-1)));    //1110==14
+    //remove/unmark a task
+    a=a | (1<<(t-1));
+    t=2;
+    printf("%d ",a& ~(1<<(t-1)));         //1100==12
+    //verify
+    printf("%d ",a & (1<<1));
+}

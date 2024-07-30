@@ -1,0 +1,17 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int rem,ans=0,mul=1;
+    int oct;
+    cout<<"Enter a number:";
+    cin>>oct;
+    while(oct)
+    {
+        rem=oct%10;
+        oct/=10;
+        ans=rem*mul+ans;
+        mul*=8;
+    }
+    cout<<"Octal form:"<<ans;
+}

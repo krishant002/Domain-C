@@ -1,0 +1,35 @@
+//Binary to Decimal and Octal
+#include<iostream>
+using namespace std;
+int main()
+{
+    int ans=0,ans2=0;
+    int rem,rem2;
+    int mul=1;
+    int bin;
+    cout<<"Enter binary digits:";
+    cin>>bin;
+    int bin2=bin;
+    while(bin)
+    {
+        rem=bin%10;
+        
+        bin/=10;
+       
+        ans=rem*mul+ans;
+        
+        mul*=2;
+    }
+    cout<<"Decimal value:"<<ans<<endl;
+    mul=1;
+    while(ans)
+    {
+        rem2=ans%8;
+        ans/=10;
+        ans2=rem2*mul+ans2;
+        mul*=10;
+        
+    }
+    
+    cout<<"Octal value:"<<ans2;
+}

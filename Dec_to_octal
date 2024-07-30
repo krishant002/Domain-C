@@ -1,0 +1,17 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int rem,ans=0,mul=1;
+    int deci;
+    cout<<"Enter a number:";
+    cin>>deci;
+    while(deci)
+    {
+        rem=deci%8;
+        deci/=8;
+        ans=rem*mul+ans;
+        mul*=10;
+    }
+    cout<<"Octal value:"<<ans;
+}
